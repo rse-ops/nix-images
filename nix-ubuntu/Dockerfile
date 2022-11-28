@@ -47,7 +47,7 @@ RUN mkdir -p /etc/apt/keyrings && \
     echo '{"cgroup-parent":"/actions_job","storage-driver":"vfs"}' >> /etc/docker/daemon.json
 
 # Ensure we can use NUR (nix user repository) and allow unfree
-COPY config.nix /root/.config/nixpkgs/config.nix
+COPY nix-ubuntu/config.nix /root/.config/nixpkgs/config.nix
 
 # Install our packages, enter the container in the shell
 WORKDIR /code

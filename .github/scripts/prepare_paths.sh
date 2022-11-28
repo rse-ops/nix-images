@@ -5,10 +5,6 @@ parsed=""
 for file in ${changed_files}; do
     filename=$(basename ${file})
 
-    # We are going to have paths inside/outside container and need relative
-    if [[ "$filename" == "uptodate.yaml" ]]; then
-        parsed="${parsed} ${file}"
-    fi
     # If we find a Dockerfile, change to uptodate.yaml if it exists
     if [[ "$filename" == "Dockerfile" ]]; then
         dir=$(dirname ${file})

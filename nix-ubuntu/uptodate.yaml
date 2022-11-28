@@ -1,0 +1,4 @@
+dockerbuild:
+  matrix:
+    ubuntu_version:
+     - "22.04"

@@ -5,7 +5,7 @@ to provide some nix bases for testing. We are hoping to provide one or more Nix 
 that can be used to build software. For more specific (pre-built) developer environments, please
 see [rse-ops/devbox](https://github.com/rse-ops/devbox)
 
-![img/rse-ops-docker.png](https://github.com/rse-ops/radius-docker/blob/main/img/rse-ops-docker.png)
+![https://raw.githubusercontent.com/rse-ops/docker-images/main/img/rse-ops-docker.png](https://raw.githubusercontent.com/rse-ops/docker-images/main/img/rse-ops-docker.png)
 
 [![License](https://img.shields.io/badge/License-MIT%203--Clause-blue.svg)](https://github.com/rse-ops/radius-docker/blob/main/LICENSE)
 

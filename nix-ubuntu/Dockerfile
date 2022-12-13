@@ -2,6 +2,7 @@ ARG ubuntu_version=22.04
 FROM ubuntu:$ubuntu_version
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ENV EDITOR=vim
+ENV DEBIAN_FRONTEND=noninteractive
 
 # docker build -t nix-base .
 
@@ -46,7 +47,7 @@ RUN mkdir -p /etc/apt/keyrings && \
     mkdir -p /etc/docker && \
     echo '{"cgroup-parent":"/actions_job","storage-driver":"vfs"}' >> /etc/docker/daemon.json
 
-# Ensure we can use NUR (nix user repository) and allow unfree
+# ensure we can use NUR (nix user repository) and allow unfree
 COPY nix-ubuntu/config.nix /root/.config/nixpkgs/config.nix
 
 # Install our packages, enter the container in the shell

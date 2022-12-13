@@ -2,6 +2,7 @@ ARG ubuntu_version=22.04
 FROM ubuntu:$ubuntu_version
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ENV EDITOR=vim
+ENV DEBIAN_FRONTEND=noninteractive
 
 # docker build -t nix-base .
 
